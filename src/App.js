@@ -6,12 +6,14 @@ import Blogs from './components/Blogs/Blogs';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 import Main from './components/layouts/Main';
+import QuizQuestions from './components/QuizQuestions/QuizQuestions';
 import QuizTopic from './components/QuizTopic/QuizTopic';
 import Statistics from './components/Statistics/Statistics';
 
 function App() {
 
   const [topic, setTopic] = useState([])
+
 
   useEffect(()=>{
     fetch('https://openapi.programming-hero.com/api/quiz')
@@ -34,7 +36,7 @@ function App() {
         },
         {
           path:'/topics',
-          element:<QuizTopic topic={topic}></QuizTopic>
+          element:<QuizTopic topic={topic} ></QuizTopic>
         },
         {
           path:'/stats',
@@ -43,6 +45,11 @@ function App() {
         {
           path:'/blogs',
           element:<Blogs></Blogs>
+        },
+        {
+          path:'/topics/:id',
+          loader:({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+          element:<QuizQuestions ></QuizQuestions>
         },
       ]},
       {
