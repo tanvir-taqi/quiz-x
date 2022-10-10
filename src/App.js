@@ -1,10 +1,58 @@
-import logo from './logo.svg';
+
+import { useEffect, useState } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Blogs from './components/Blogs/Blogs';
+import ErrorPage from './components/ErrorPage/ErrorPage';
+import Home from './components/Home/Home';
+import Main from './components/layouts/Main';
+import QuizTopic from './components/QuizTopic/QuizTopic';
+import Statistics from './components/Statistics/Statistics';
 
 function App() {
+
+  const [topic, setTopic] = useState([])
+
+  useEffect(()=>{
+    fetch('https://openapi.programming-hero.com/api/quiz')
+    .then(res => res.json())
+    .then(data => setTopic(data.data))
+  },[])
+
+  const router = createBrowserRouter([
+    {
+      path:'/',
+      element:<Main></Main>,
+      children:[
+        {
+          path:'/',
+          element:<Home></Home>
+        },
+        {
+          path:'/home',
+          element:<Home></Home>
+        },
+        {
+          path:'/topics',
+          element:<QuizTopic topic={topic}></QuizTopic>
+        },
+        {
+          path:'/stats',
+          element:<Statistics></Statistics>
+        },
+        {
+          path:'/blogs',
+          element:<Blogs></Blogs>
+        },
+      ]},
+      {
+        path:"*",
+        element:<ErrorPage></ErrorPage>
+      }
+  ])
   return (
-    <div className="App">
- <h1>Hello World!!</h1>
+    <div >
+        <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
