@@ -24,3 +24,16 @@
     }
     
 }
+
+.react-color{
+    background: red;
+}
+.js-color{
+    background: blue;
+}
+.css-color{
+    background: yellow;
+}
+.git-color{
+    background: #000;
+}

@@ -60,7 +60,7 @@ const SingleQuestion = ({ qs }) => {
 
 
     return (
-        <div className='border border-gray-700 p-3 rounded-lg'>
+        <div className='border border-gray-700 bg-slate-300 my-6 p-3 rounded-lg'>
             <h1 className="text-center text-lg font-medium">{question}</h1>
             <div className='flex flex-col justify-start'>
 
@@ -77,10 +77,10 @@ const SingleQuestion = ({ qs }) => {
                     eye ? <FontAwesomeIcon icon={faEye}></FontAwesomeIcon> : <FontAwesomeIcon icon={faEyeSlash}></FontAwesomeIcon>
                 }
             </div>
-            <div className={`text-center   ${ansColor ? 'bg-green-300 ' : 'bg-red-600 '}`}>
+            <div className={`text-center font-bold text-lg  ${ansColor ? 'bg-green-400 ' : 'bg-red-500 '}`}>
                 {rightAnswer}
             </div>
-            <div className={`${eye ? 'block' : 'hidden'} text-center py-2`}>
+            <div className={`${eye ? 'block' : 'hidden'} text-center rounded text-lg font-semibold bg-slate-500 my-2 py-1`}>
                 <h1>Correct Answer is : {correctAnswer}</h1>
             </div>
             <div>
