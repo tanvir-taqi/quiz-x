@@ -8,13 +8,13 @@ const SingleTopic = ({singleTopic}) => {
     const {name,total,id,logo} = singleTopic
     return (
         <div >
-            <div className="topic-card border rounded bg-gray-500">
+            <div className="topic-card border rounded bg-gray-400">
                 <img src={logo} alt="" />
-                <div className="content flex justify-around py-3">
+                <div className="content flex justify-around items-center py-3">
                     <h1 className='font-lg font-bold'>{name}</h1>
                     <p>Total: {total}</p>
-                    <Link to={`../topics/${id}`}>
-                    <button >Start Now <span><FontAwesomeIcon icon={faArrowCircleRight}></FontAwesomeIcon></span></button>
+                    <Link to={`../topics/${id}`} className='bg-slate-600 p-2 rounded-lg  hover:bg-black hover:text-gray-200'>
+                    <button className='font-bold' >Start Now <span><FontAwesomeIcon icon={faArrowCircleRight}></FontAwesomeIcon></span></button>
                     </Link>
                 </div>
 
