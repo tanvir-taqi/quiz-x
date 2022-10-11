@@ -5,7 +5,7 @@ import './QuizTopic.css'
 const QuizTopic = ({topic}) => {
     
     return (
-        <div className='all-topics block py-32 md:px-20'>
+        <div className='all-topics block py-32 md:px-20 bg-gray-200 md:m-6 rounded'>
             
             {
                 topic.map(qtopic => <SingleTopic

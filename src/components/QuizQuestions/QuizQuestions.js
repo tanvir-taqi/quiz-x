@@ -22,6 +22,7 @@ const QuizQuestions = () => {
            <div className=' py-32 quiz-container'>
            
            <div className='question-container'>
+            
            {
                questions.map(qs => <SingleQuestion
                key={qs.id}

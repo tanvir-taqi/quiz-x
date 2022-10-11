@@ -17,7 +17,7 @@ const Statistics = ({ topic }) => {
                 <br />
                 <p className='font-medium text-lg'>Here is a chart for number of questions in our website.Get the mouse on the chart to see detail. Practice here and get skilled and be a tech genious.</p>
                 <Link to='/topics'>
-                <button className='bg-slate-600 py-2 px-4 my-6 rounded text-black hover:bg-black hover:text-gray-100'>Start Quiz</button>
+                <button className='bg-slate-600 font-bold py-2 px-4 my-6 rounded text-black hover:bg-black hover:text-gray-100'>Start Quiz</button>
                 </Link>
             </div>
             <div className="flex  items-center justify-center md:w-1/2 ">

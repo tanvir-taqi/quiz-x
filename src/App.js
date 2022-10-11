@@ -19,6 +19,7 @@ function App() {
     fetch('https://openapi.programming-hero.com/api/quiz')
     .then(res => res.json())
     .then(data => setTopic(data.data))
+   
   },[])
 
   const router = createBrowserRouter([
@@ -48,7 +49,10 @@ function App() {
         },
         {
           path:'/topics/:id',
-          loader:({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+          loader:async({params})=>{
+            console.log(params);
+           return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+          },
           element:<QuizQuestions ></QuizQuestions>
         },
       ]},
