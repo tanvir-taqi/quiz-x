@@ -5,7 +5,9 @@ const SingleQuestion = ({ qs }) => {
     const { question, correctAnswer, options } = qs
     const [answer, setAnswer] = useState('')
 
-    const handleAnswer = (qanswer) => {
+    const handleAnswer = (qanswer ) => {
+
+       
         
         if (qanswer === correctAnswer) {
             setAnswer('bg-blue-400')
@@ -17,16 +19,17 @@ const SingleQuestion = ({ qs }) => {
         return
     }
 
-    const handleQuestion = (answer)=>{
-        // handleAnswer(answer)
-        // return
-    }
+   
     return (
-        <div onClick={()=>handleQuestion(answer)}>
+        <div >
             <h1 className="text-center text-lg font-medium">{question}</h1>
+            <div >
+
             {
+                
                 options.map(option => <Option handleAnswer={handleAnswer} answer={answer} key={options.indexOf(option)} option={option}></Option>)
             }
+            </div>
         </div>
     );
 };

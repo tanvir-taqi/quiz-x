@@ -2,6 +2,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
 
@@ -10,22 +11,22 @@ const Header = () => {
     const handeResponsive = () => {
         setDisplay(!display)
     }
-
+    // flex-col md:flex-row absolute  bg-slate-400 w-full  inset-32  md:inset-0 md:relative 
     return (
         <div>
-            <div className="flex justify-around w-full py-6  bg-slate-400">
+            <div className="flex justify-around   py-6  bg-slate-400">
                 <div className=' flex justify-around md:w-full'>
-                    <div className="logo">
+                    <div className="logo ">
                         <Link to='/'>
                             <h1 className="text-xl font-bold">QuizX</h1>
                         </Link>
                     </div>
-                    <div className={`nav   ${display ? 'hidden' : 'block'} relative md:block`}>
-                        <ul className={`mx-0 px-0 flex justify-around ${display ? 'flex-row ' : 'flex-col md:flex-row absolute  inset-y-24 md:inset-0 md:relative '} `} onClick={handeResponsive}>
-                            <li className='md:mr-8 font-medium bg-slate-400 '><Link to="/home">Home</Link></li>
-                            <li className='md:mr-8 font-medium bg-slate-400 '><Link to="/topics">Topics</Link></li>
-                            <li className='md:mr-8 font-medium bg-slate-400 '><Link to="/stats">Statistics</Link></li>
-                            <li className='md:mr-8 font-medium bg-slate-400 '><Link to="/blogs">Blogs</Link></li>
+                    <div className={`   ${display ? 'hidden md:block' : 'block'}  md:block`}>
+                        <ul className={`hidden  md:flex  justify-around ${display ? 'flex' : ' response '} `} >
+                            <li className='pl-8 py-3 font-medium bg-slate-400 '><Link to="/home">Home</Link></li>
+                            <li className='pl-8 py-3 font-medium bg-slate-400 '><Link to="/topics">Topics</Link></li>
+                            <li className='pl-8 py-3 font-medium bg-slate-400 '><Link to="/stats">Statistics</Link></li>
+                            <li className='pl-8 py-3 font-medium bg-slate-400 '><Link to="/blogs">Blogs</Link></li>
                         </ul>
                     </div>
                 </div>
