@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import Option from '../Option/Option';
 import { AnswerCount } from '../QuizQuestions/QuizQuestions';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SingleQuestion = ({ qs }) => {
 
@@ -24,9 +26,30 @@ const handleAnswer = (answer)=>{
             setAnsCOlor(true)
             setRightAnswer(`You Are Right!!!`)
             setCount(count + 1)
+            toast('You Are Right!', {
+                position: "top-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+
         }else{
             setAnsCOlor(false)
             setRightAnswer('Sorry Bro!! Try Again some time...')
+            toast('Sorry Dear!!', {
+                position: "top-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         }
     }else{
         return
@@ -59,6 +82,20 @@ const handleAnswer = (answer)=>{
             </div>
             <div className={`${eye ? 'block' : 'hidden'} text-center py-2`}>
                 <h1>Correct Answer is : {correctAnswer}</h1>
+            </div>
+            <div>
+            <ToastContainer
+position="top-right"
+autoClose={1000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
             </div>
         </div>
     );
