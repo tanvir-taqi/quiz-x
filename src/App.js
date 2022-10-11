@@ -40,7 +40,7 @@ function App() {
         },
         {
           path:'/stats',
-          element:<Statistics></Statistics>
+          element:<Statistics topic= {topic}></Statistics>
         },
         {
           path:'/blogs',
