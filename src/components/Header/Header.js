@@ -23,10 +23,10 @@ const Header = () => {
                     </div>
                     <div className={`   ${display ? 'hidden md:block' : 'block'}  md:block`}>
                         <ul className={`hidden  md:flex  justify-around ${display ? 'flex' : ' response '} `} >
-                            <li className='pl-8 py-3 font-medium bg-slate-300 '><Link className='text-lg text-slate-800 hover:text-black' to="/home">Home</Link></li>
-                            <li className='pl-8 py-3 font-medium bg-slate-300 '><Link className='text-lg text-slate-800 hover:text-black' to="/topics">Topics</Link></li>
-                            <li className='pl-8 py-3 font-medium bg-slate-300 '><Link className='text-lg text-slate-800 hover:text-black' to="/stats">Statistics</Link></li>
-                            <li className='pl-8 py-3 font-medium bg-slate-300 '><Link className='text-lg text-slate-800 hover:text-black' to="/blogs">Blogs</Link></li>
+                            <li className='pl-8 py-3  bg-slate-300 '><Link className='text-lg font-semibold text-slate-800 hover:text-black' to="/home">Home</Link></li>
+                            <li className='pl-8 py-3  bg-slate-300 '><Link className='text-lg font-semibold text-slate-800 hover:text-black' to="/topics">Topics</Link></li>
+                            <li className='pl-8 py-3  bg-slate-300 '><Link className='text-lg font-semibold text-slate-800 hover:text-black' to="/stats">Statistics</Link></li>
+                            <li className='pl-8 py-3  bg-slate-300 '><Link className='text-lg font-semibold text-slate-800 hover:text-black' to="/blogs">Blogs</Link></li>
                         </ul>
                     </div>
                 </div>

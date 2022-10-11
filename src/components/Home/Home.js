@@ -7,9 +7,9 @@ import './Home.css'
 const Home = () => {
     return (
         <div className='py-32 relative m-10 flex justify-center items-center'>
-            <div className="absolute inset-0 -z-40 home-img" ></div>
-           <div className='md:py-24 py-4 px-2 text-gray-400'>
-           <h1 className="text-4xl font-bold ">Welcome to <span className='text-gray-100'>QuizX</span></h1>
+            <div className="absolute inset-0  -z-40 home-img" ></div>
+           <div className='md:py-24 py-4 px-2 font-medium tracking-wide text-black'>
+           <h1 className="text-4xl font-bold ">Welcome to <span className='text-white'>QuizX</span></h1>
             <p className='py-2 my-1 text-lg tracking-wide'>Take Quizes And Keep Practicing</p>
             <p className='py-2 my-1 text-lg tracking-wide'>And Be a Developer</p>
             <Link to='/topics'>
