@@ -1,0 +1,7 @@
+.home-img{
+    background: url('https://i.ibb.co/ysSnCmX/color-interrogation-symbols-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(10%);
+    border-radius: 30px;
+}
