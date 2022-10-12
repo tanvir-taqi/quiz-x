@@ -1,4 +1,4 @@
-#### QuizX
+### QuizX
 ## A quiz app
 
 **Live Link** 
