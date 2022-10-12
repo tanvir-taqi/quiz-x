@@ -30,8 +30,10 @@ function App() {
     fetch('https://openapi.programming-hero.com/api/quiz')
     .then(res => res.json())
     .then(data => setTopic(data.data))
-   
+    
   },[])
+  console.log(topic);
+  
 
   const router = createBrowserRouter([
     {
@@ -40,7 +42,7 @@ function App() {
       children:[
         {
           path:'/',
-          element:<Home></Home>
+          element:<Home topic={topic}></Home>
         },
         {
           path:'/home',

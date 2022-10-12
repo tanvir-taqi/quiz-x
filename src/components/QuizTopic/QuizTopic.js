@@ -4,6 +4,7 @@ import SingleTopic from '../SingleTopic/SingleTopic';
 import './QuizTopic.css'
 
 const QuizTopic = ({topic}) => {
+    console.log(topic);
     const dark = useContext(DarkContext)
     
     return (
