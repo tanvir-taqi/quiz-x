@@ -7,7 +7,7 @@ import './Home.css'
 
 const Home = ({ topic }) => {
     return (
-        <div className='py-32 '>
+        <div className='py-20 '>
             <div className='relative m-10 flex justify-center items-center'>
             <div className="absolute inset-0  -z-40 home-img" ></div>
             <div className='md:py-24 py-4 px-2 font-medium tracking-wide text-black'>
@@ -23,7 +23,7 @@ const Home = ({ topic }) => {
             </div>
             </div>
             
-            <div className='relative'>
+            <div className='relative py-6'>
                 <QuizTopic topic={topic}></QuizTopic>
             </div>
         </div>
