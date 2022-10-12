@@ -1,5 +1,6 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { DarkContext } from '../../App';
 import SingleQuestion from '../SingleQuestion/SingleQuestion';
 import './QuizQuestion.css'
 
@@ -8,7 +9,8 @@ export const AnswerCount = createContext(0)
 
 const QuizQuestions = () => {
    const quizQuestions = useLoaderData()
-   console.log(quizQuestions);
+  
+   const dark = useContext(DarkContext)
 
    const { questions, name  } = quizQuestions.data
 
@@ -30,7 +32,7 @@ const QuizQuestions = () => {
             <div className='   quiz-container '>
 
 
-               <div className='question-container mx-3 rounded-lg bg-slate-200'>
+               <div className={`question-container mx-3 rounded-lg ${dark ? 'bg-gray-500' : 'bg-slate-400'}`}>
 
                   {
                      questions.map(qs => <SingleQuestion
@@ -40,7 +42,7 @@ const QuizQuestions = () => {
                      ></SingleQuestion>)
                   }
                </div>
-               <div className='right-answer relative bg-slate-400 text-center py-16'>
+               <div className={`right-answer relative text-black ${dark ? 'bg-gray-500' : 'bg-slate-400'}  text-center py-16`}>
                   <h1 className="text-xl font-bold mb-6">Result Is Here </h1>
 
                   <h1 className={`text-lg font-semibold  ${count ? 'block' : 'hidden'}`}>You Got {count} Out Of {questions.length}</h1>

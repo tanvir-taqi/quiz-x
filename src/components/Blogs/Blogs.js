@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DarkContext } from '../../App';
 import './Blogs.css'
 
 const Blogs = () => {
+
+    const dark = useContext(DarkContext)
+
     return (
-        <div className='my-32 px-10 md:mx-4 py-10 bg-slate-200 rounded-lg'>
-            <h1 className="text-3xl text-center font-bold py-4 bg-slate-200">Articles</h1>
+        <div className={`my-32 px-10 md:mx-4 py-10 ${dark ? 'bg-gray-500 text-gray-900' : 'bg-slate-300' } rounded-lg`}>
+            <h1 className="text-3xl text-center font-bold py-4">Articles</h1>
             <div className=" my-3 py-4 articles md:mx-6 mx-1 ">
                 <div className=" bg-gray-400 article px-4 md:px-8 py-4">
                     <h1 className="text-xl text-center font-bold  my-3 ">What is the purpose of using React Router?</h1>

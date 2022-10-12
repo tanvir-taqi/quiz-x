@@ -5,8 +5,11 @@ import Option from '../Option/Option';
 import { AnswerCount } from '../QuizQuestions/QuizQuestions';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { DarkContext } from '../../App';
 
 const SingleQuestion = ({ qs }) => {
+
+    const dark = useContext(DarkContext)
 
     const [count, setCount] = useContext(AnswerCount);
 
@@ -60,7 +63,7 @@ const SingleQuestion = ({ qs }) => {
 
 
     return (
-        <div className='border border-gray-700 bg-slate-300 my-6 p-3 rounded-lg'>
+        <div className={`border text-black border-gray-700 ${dark ? 'bg-gray-700' : 'bg-slate-400'} my-6 p-3 rounded-lg`}>
             <h1 className="text-center text-lg font-medium">{question}</h1>
             <div className='flex flex-col justify-start'>
 

@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blogs from './components/Blogs/Blogs';
@@ -10,9 +10,20 @@ import QuizQuestions from './components/QuizQuestions/QuizQuestions';
 import QuizTopic from './components/QuizTopic/QuizTopic';
 import Statistics from './components/Statistics/Statistics';
 
+export const DarkContext = createContext(false)
+
 function App() {
 
   const [topic, setTopic] = useState([])
+
+  const [dark , setDark] = useState(false)
+
+  const handleDark = ()=>{
+    setDark(!dark)
+    document.body.classList.toggle('light-theme')
+    document.body.classList.toggle('dark-theme')
+    
+  }
 
 
   useEffect(()=>{
@@ -25,7 +36,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path:'/',
-      element:<Main></Main>,
+      element:<Main  handleDark={handleDark}></Main>,
       children:[
         {
           path:'/',
@@ -60,7 +71,10 @@ function App() {
   ])
   return (
     <div >
+      <DarkContext.Provider value={dark}>
+
         <RouterProvider router={router}></RouterProvider>
+      </DarkContext.Provider>
     </div>
   );
 }

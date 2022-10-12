@@ -1,0 +1,7 @@
+.topic-card{
+    border-bottom:6px solid black ;
+    border-left:6px solid black ;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 80px;
+}

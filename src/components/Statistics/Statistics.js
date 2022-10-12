@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import { DarkContext } from '../../App';
 
 
 const Statistics = ({ topic }) => {
 
-    console.log(topic);
+    const dark = useContext(DarkContext)
 
 
 
 
     return (
-        <div className='py-28 md:m-10 flex flex-col-reverse md:flex-row md:px-10 bg-gray-200'>
+        <div className={`py-28 md:m-10  flex flex-col-reverse md:flex-row md:px-10 ${dark ? 'bg-gray-500 text-gray-900' : 'bg-slate-300' } `}>
             <div className="md:w-1/2 flex items-center justify-center flex-col">
                 <h1 className="text-3xl font-semibold text-center">Statistics</h1>
                 <br />

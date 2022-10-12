@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DarkContext } from '../../App';
 import SingleTopic from '../SingleTopic/SingleTopic';
 import './QuizTopic.css'
 
 const QuizTopic = ({topic}) => {
+    const dark = useContext(DarkContext)
     
     return (
-        <div className='block py-10 my-32 md:px-20 bg-gray-200 md:m-6 rounded'>
+        <div className={`block py-10 my-32 md:px-20  md:m-6 rounded ${dark ? 'bg-gray-500' : 'bg-gray-200' }`}>
             <div className='mb-6'>
 
             <h1 className="text-center text-2xl font-semibold">Start the Test.</h1>

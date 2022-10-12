@@ -2,10 +2,10 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 
-const Main = () => {
+const Main = ({handleDark}) => {
     return (
         <div>
-            <Header></Header>
+            <Header handleDark={handleDark}></Header>
             <Outlet></Outlet>
         </div>
     );

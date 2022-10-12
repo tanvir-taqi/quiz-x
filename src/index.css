@@ -16,3 +16,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.light-theme{
+  background: rgb(228, 242, 253);
+  color: black;
+}
+.dark-theme{
+  background: rgb(44, 44, 44);
+  color: aliceblue;
+}
