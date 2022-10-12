@@ -42,7 +42,7 @@ const SingleQuestion = ({ qs }) => {
 
             } else {
                 setAnsCOlor(false)
-                setRightAnswer('Sorry Bro!! Try Again some time...')
+                setRightAnswer('Sorry Dear!! Try Again some another time...')
                 toast('Sorry Dear!!', {
                     position: "top-right",
                     autoClose: 1000,

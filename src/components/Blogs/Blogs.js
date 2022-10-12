@@ -29,7 +29,7 @@ const Blogs = () => {
                     <h1 className="text-xl text-center font-bold  my-3">What is "useRef"?</h1>
                     <br />
                     <p className='my-2 text-justify text-lg font-normal'>
-                        useRef() is a react hook. useRef() is useful for more than the ref attribute. useRef returns a mutable ref object whose current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component. Smmary is we can store a initial value in a variable using useRef(). And then we can use this with any element for its current property or attribute 
+                        useRef() is a react hook. useRef() is useful for more than the ref attribute. useRef returns a mutable ref object whose current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component. Smmary is we can store a initial value in a variable using useRef(). And then we can use this with any element for its current property or attribute. 
                     </p>
 
                 </div>

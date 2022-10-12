@@ -1,7 +1,7 @@
 # QuizX
 ## A quiz app
 
-**Live Link** 
+**Live Link**  [QuizX](https://quizxpro.netlify.app/)
 
 This is a web app developed with React.js.Here you can attend a test on react, js, css and git.
 
@@ -12,3 +12,5 @@ This is a web app developed with React.js.Here you can attend a test on react, j
 - Smooth data loading with react hooks.
 - 404 error page
 - A blog page
+- Statictics of number of questions
+- Light and Dark Mode 
