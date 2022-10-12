@@ -8,7 +8,7 @@ const QuizTopic = ({topic}) => {
     const dark = useContext(DarkContext)
     
     return (
-        <div className={`block py-10 my-32 md:px-10  md:m-6 rounded ${dark ? 'bg-gray-500' : 'bg-slate-300' }`}>
+        <div className={`block py-10 my-32 md:px-8  md:m-6 rounded ${dark ? 'bg-gray-500' : 'bg-slate-300' }`}>
             <div className='mb-6'>
 
             <h1 className="text-center text-2xl font-semibold">Start the Test.</h1>
