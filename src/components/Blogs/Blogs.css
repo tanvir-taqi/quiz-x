@@ -1,0 +1,20 @@
+.articles{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.article{
+    border-bottom:6px solid black ;
+    border-left:6px solid black ;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 80px;
+}
+
+@media screen  and (max-width:768px){
+    .articles{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}

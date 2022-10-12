@@ -20,7 +20,7 @@ const QuizQuestions = () => {
 
    return (
       <AnswerCount.Provider value={[count, setCount]}>
-         <div className={`py-20 `}>
+         <div className={`py-20`}>
             <div className=" mb-10">
                <h1 className="text-center font-extrabold text-3xl my-2">Welcome To the world of {name}</h1>
                <p className='text-center text-lg font-medium'>You Can only Choose Once. <br /> So Be Careful. <br />
