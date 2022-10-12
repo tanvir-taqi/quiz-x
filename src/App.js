@@ -44,7 +44,7 @@ function App() {
         },
         {
           path:'/home',
-          element:<Home></Home>
+          element:<Home topic={topic}></Home>
         },
         {
           path:'/topics',
